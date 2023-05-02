@@ -14,10 +14,12 @@ public class Main {
         nodeA.right = nodeC;
         nodeB.right = nodeD;
 
-        System.out.println("Hello world!");
+        System.out.println(preorderTraversal(nodeA));
+        System.out.println(inorderTraversal(nodeA));
+        System.out.println(postorderTraversal(nodeA));
     }
 
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public static List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();
         if (root != null) {
@@ -43,7 +45,7 @@ public class Main {
         return result;
     }
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();
         if (root != null) {
@@ -69,7 +71,7 @@ public class Main {
         return result;
     }
 
-    public List<Integer> postorderTraversal(TreeNode root) {
+    public static List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();
         if (root != null) {
